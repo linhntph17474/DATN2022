@@ -2,7 +2,7 @@
 # Thành viên nhóm:<br>
 * Đoàn Phú Thái <br>
 * Trịnh Tiến Lực <br>
-* Phạm Thị Thuỳ Linh <br>
+* Nguyễn Thuý Linh <br>
 * Nguyễn Đức Huy <br>
 # Tài liệu dự án
 1. [Github](http://~)
