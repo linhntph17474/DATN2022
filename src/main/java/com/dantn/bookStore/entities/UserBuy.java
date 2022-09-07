@@ -7,24 +7,23 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
 @Entity
 @Table
-public class Cart implements Serializable{
+public class UserBuy implements Serializable{
 	@EmbeddedId
-	private UserClickPK userClickPK;
+	private UserBuyPK userBuyPK;
 	@ManyToOne
 	@JoinColumn(name = "user_id",insertable = false,updatable = false)
 	private User user;
 	@ManyToOne
 	@JoinColumn(name = "book_id",insertable = false,updatable = false)
 	private Book book;
-	private Long amount;
-	public UserClickPK getUserClickPK() {
-		return userClickPK;
+	private Long purchases;
+	public UserBuyPK getUserBuyPK() {
+		return userBuyPK;
 	}
-	public void setUserClickPK(UserClickPK userClickPK) {
-		this.userClickPK = userClickPK;
+	public void setUserBuyPK(UserBuyPK userBuyPK) {
+		this.userBuyPK = userBuyPK;
 	}
 	public User getUser() {
 		return user;
@@ -38,11 +37,11 @@ public class Cart implements Serializable{
 	public void setBook(Book book) {
 		this.book = book;
 	}
-	public Long getAmount() {
-		return amount;
+	public Long getPurchases() {
+		return purchases;
 	}
-	public void setAmount(Long amount) {
-		this.amount = amount;
+	public void setPurchases(Long purchases) {
+		this.purchases = purchases;
 	}
 	
 }
