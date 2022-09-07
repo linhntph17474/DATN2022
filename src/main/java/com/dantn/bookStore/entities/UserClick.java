@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class Cart implements Serializable{
+public class UserClick implements Serializable{
 	@EmbeddedId
 	private UserClickPK userClickPK;
 	@ManyToOne
@@ -19,7 +19,6 @@ public class Cart implements Serializable{
 	@ManyToOne
 	@JoinColumn(name = "book_id",insertable = false,updatable = false)
 	private Book book;
-	private Long amount;
 	public UserClickPK getUserClickPK() {
 		return userClickPK;
 	}
@@ -37,12 +36,6 @@ public class Cart implements Serializable{
 	}
 	public void setBook(Book book) {
 		this.book = book;
-	}
-	public Long getAmount() {
-		return amount;
-	}
-	public void setAmount(Long amount) {
-		this.amount = amount;
 	}
 	
 }
